@@ -78,6 +78,7 @@ class _SpookyGameScreenState extends State<SpookyGameScreen>
   }
 
   void _playBackgroundMusic() async {
+    await _audioPlayer.setLoopMode(LoopMode.one);
     await _audioPlayer.setAsset('assets/spooky_background.mp3');
     _audioPlayer.play();
   }
